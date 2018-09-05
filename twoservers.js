@@ -20,7 +20,7 @@ server.listen(goodPORT, function() {
 })
 
 
-function handleRequest(request, response) {
+function handleRequestTwo(request, response) {
 
     // send this string to the client.
     response.end("You should shower more:" + request.url);
@@ -28,7 +28,7 @@ function handleRequest(request, response) {
 }
 
 // gives the server functionality.
-var server = http.createServer(handleRequest);
+var server = http.createServer(handleRequestTwo);
 
 //start server so it begins to listen to client requests
 server.listen(badPORT, function() {
