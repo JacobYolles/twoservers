@@ -12,10 +12,10 @@ function handleRequest(request, response) {
 }
 
 // gives the server functionality.
-var server = http.createServer(handleRequest);
+var serverOne = http.createServer(handleRequest);
 
 //start server so it begins to listen to client requests
-server.listen(goodPORT, function() {
+serverOne.listen(goodPORT, function() {
     console.log("Server listening on : http://localhost:" + goodPORT);
     
 })
@@ -30,10 +30,10 @@ function handleRequestTwo(request, response) {
 }
 
 // gives the server functionality.
-var server = http.createServer(handleRequestTwo);
+var serverTwo = http.createServer(handleRequestTwo);
 
 //start server so it begins to listen to client requests
-server.listen(badPORT, function() {
+serverTwo.listen(badPORT, function() {
     console.log("Server listening on : http://localhost:" + badPORT);
     
 })
