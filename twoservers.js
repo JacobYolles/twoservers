@@ -4,9 +4,10 @@ var goodPORT = 7000;
 var badPORT = 7500;
 
 function handleRequest(request, response) {
-
+    var phrases = ["You always look really pretty", "You have a great smile", "You make people happy"];
+    var phraseChosen = phrases[Math.floor(Math.random() * phrases.length)];
     // send this string to the client.
-    response.end("You always look really pretty:" + request.url);
+    response.end(phraseChosen + request.url);
     
 }
 
@@ -21,9 +22,10 @@ server.listen(goodPORT, function() {
 
 
 function handleRequestTwo(request, response) {
-
+    var phrases = ["People generally hate you", "You seem to make poor choices", "People don't like thinking about you"];
+    var phraseChosen = phrases[Math.floor(Math.random() * phrases.length)];
     // send this string to the client.
-    response.end("You should shower more:" + request.url);
+    response.end(phraseChosen + request.url);
     
 }
 
